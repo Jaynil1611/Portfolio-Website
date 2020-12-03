@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaynil | Portfolio</title>
+    <link href="styles.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -28,10 +29,11 @@
     <h2>@Containers</h2>
 
     <h3>@fluid container</h3>
-    <div> This is a fluid container which will stretch end-to-end and occupy the entire row. </div>
+    <div class="container"> This is a fluid container which will stretch end-to-end and occupy the entire row. </div>
 
     <h3>@center container</h3>
-    <div> This is a center container which will be at the center of the row and will stretch only till the specified
+    <div class="container container-center"> This is a center container which will be at the center of the row and will
+        stretch only till the specified
         width </div>
 
 
@@ -41,8 +43,8 @@
     <h2>@Links</h2>
 
     <!-- Inline elements -->
-    <a href="/">Primary Link</a>
-    <a href="/">Secondary Link</a>
+    <a class="link link-primary" href="/">Primary Link</a>
+    <a class="link link-secondary" href="/">Secondary Link</a>
 
 
     <hr>
@@ -51,17 +53,17 @@
     <h2>@Lists</h2>
 
     <h3>@unordered lists</h3>
-    <ul>
+    <ul class="list-non-bullet">
         <li> Item One </li>
         <li> Item Two </li>
         <li> Item Three </li>
     </ul>
 
     <h3>@unordered inline lists</h3>
-    <ul>
-        <li> Inline Item One </li>
-        <li> Inline Item Two </li>
-        <li> Inline Item Three </li>
+    <ul class="list-non-bullet">
+        <li class="list-item-inline"> Inline Item One </li>
+        <li class="list-item-inline"> Inline Item Two </li>
+        <li class="list-item-inline"> Inline Item Three </li>
     </ul>
 
     <h3>@ordered lists</h3>
@@ -84,16 +86,17 @@
 
     <h2>@Nav</h2>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="/">Home</a>
+    <nav class="navigation">
+        <div class="nav-brand"> Programming Geek Jaynil</div>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline ">
+                <a class="link link-active" href="/">Home</a>
             </li>
-            <li>
-                <a href="/">Projects</a>
+            <li class="list-item-inline">
+                <a class="link" href="/">Projects</a>
             </li>
-            <li>
-                <a href="/">About</a>
+            <li class="list-item-inline">
+                <a class="link" href="/">About</a>
             </li>
         </ul>
     </nav>
@@ -105,10 +108,10 @@
 
 
     <h2>@Header</h2>
-    <header>
-        <img
+    <header class="hero">
+        <img class="hero-img"
             src="https://avatars0.githubusercontent.com/u/48921037?s=460&u=486810ab25d526b1ef8b486cfa1a6c6de51e129a&v=4" />
-        <h1>Hey, I am Jaynil</h1>
+        <h1 class="hero-heading">Hey, I am Jaynil <span class="hero-heading-inverted"> I am geek</span></h1>
     </header>
 
 
@@ -117,34 +120,36 @@
 
     <h2>@Sections</h2>
     <p> Sections are a part of the page which provide different views to the page <p>
-    <section>
-        <h3> Blue background </h3>
-        <p> This section will be of blue background </p>
-    </section>
+            <section class="section">
+                <div class="container container-center"></div>
+                <h1> Blue background </h1>
+                <p> This section will be of blue background </p>
+            </section>
 
-    <section>
-        <h3> Cyan background</h3>
-        <p> This section will be of cyan background </p>
-    </section>
-
-
-    <hr>
-
+            <section class="section ow">
+                <div class="container container-center"></div>
+                <h1> Cyan background</h1>
+                <p> This section will be of cyan background </p>
+            </section>
 
 
-    <h2>@Footer</h2>
-    <footer>
-        <div> Contacts & social links are listed in footer </div>
-        <ul>
-            <li>LinkedIn</li>
-            <li>Twitter</li>
-            <li>GitHub</li>
-            <li>Instagram</li>
-        </ul>
+            <hr>
 
-    </footer>
 
-    <hr>
+
+            <h2>@Footer</h2>
+            <footer class="footer">
+                <div class="footer-header"> Contacts & social links are listed in footer </div>
+                <ul class="list-non-bullet">
+                    <li class="list-item-inline"><a href="" class="link">LinkedIn</li>
+                    <li class="list-item-inline"><a href="" class="link">Twitter</li>
+                    <li class="list-item-inline"><a href="" class="link">GitHub</li>
+                    <li class="list-item-inline"><a href="" class="link">Instagram</li>
+                </ul>
+
+            </footer>
+
+            <hr>
 
 
 
