@@ -6,16 +6,13 @@
     --primary-color:#047857;
     --dark-teal:#115E59;
     --off-white:#F0FDF4;
-    --emerald:#A7F3D0;
+    --emerald-color:#A7F3D0;
 }
 
 body {
     font-family: 'Exo 2', sans-serif;
     font-size: larger;  
-}
-
-hr {
-    margin: 2rem 0rem;
+    margin: auto;
 }
 
 p {
@@ -143,7 +140,7 @@ header p{
 }
 
 .eme {
-    background-color: var(--emerald);
+    background-color: var(--emerald-color);
 }
 
 .ow {
