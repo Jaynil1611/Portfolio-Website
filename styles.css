@@ -3,18 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&display=swap');
 
 :root {
-    --primary-color:#059669;
+    --primary-color:#047857;
     --dark-teal:#115E59;
-    --off-white: #D1FAE5;
+    --off-white:#F0FDF4;
+    --emerald:#A7F3D0;
 }
 
 body {
     font-family: 'Exo 2', sans-serif;
-    margin: 0px;
+    font-size: larger;  
 }
 
 hr {
     margin: 2rem 0rem;
+}
+
+p {
+    text-align: center;     
 }
 
 /* container */
@@ -23,7 +28,7 @@ hr {
 }
 
 .container-center {
-    max-width: 600px;
+    max-width: 500px;
     margin: auto;
 }
 
@@ -37,13 +42,26 @@ hr {
 .link-primary {
     background-color: var(--primary-color);
     border-radius: 0.5rem;
-    color:white;
+    color:white;    
+}
+
+.link-primary:hover {
+    background-color:white;
+    color: var(--primary-color);
+    border-radius: 0.5rem;
+    border: 1px solid green;
 }
 
 .link-secondary {
     color: var(--primary-color);
     border-radius: 0.5rem;
     border: 1px solid green;
+}
+
+.link-secondary:hover {
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    color:white;    
 }
 
 /* list */
@@ -66,6 +84,7 @@ hr {
 
 .navigation .nav-brand {
     font-weight: bold;
+    font-size: larger;
 }
 
 .navigation .nav-pills {
@@ -74,10 +93,12 @@ hr {
 
 .navigation .link {
     color:white;
+    
 }
 
 .navigation .link-active {
     font-weight: bold;
+    font-size: larger;
 }
 
 /* header */
@@ -96,10 +117,21 @@ hr {
     text-align: center;
     padding-top: 1rem;
     color: var(--dark-teal);
+    margin: auto;
 }
 
 .hero .hero-heading-inverted {
     color: var(--primary-color);
+}
+
+header p{
+    margin: auto;
+    padding: 0.5rem;
+    font-size: x-large;
+    text-align: center;
+    /* font-weight: bold; */
+    color: var(--primary-color);
+
 }
 
 /* section */
@@ -110,14 +142,22 @@ hr {
     text-align: center;
 }
 
+.eme {
+    background-color: var(--emerald);
+}
+
 .ow {
     background-color: var(--off-white) ;
+}
+
+section div ul {
+    padding-inline-start: 0px;
 }
 
 /* footer */
 .footer {
     background-color: var(--primary-color);
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     text-align: center;
     color:white;
     border-top-right-radius: 1rem;
@@ -125,12 +165,31 @@ hr {
 
 .footer .footer-header {
     font-weight: bold;
-    font-size: large;
+    font-size: larger;
 }
 
 .footer .link {
     color:white;
 }
-.footer .ul {
+
+.footer ul {
     padding-inline-start: 0rem;
+    /* margin-block-start: 0rem; */
+    margin-block-end: 0rem;
+    margin-inline-end: 0rem;
+}
+
+.mail-link {
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+}
+
+footer p {
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+}
+
+footer p i {
+   vertical-align: text-top;
 }

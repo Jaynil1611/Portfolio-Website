@@ -6,152 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaynil | Portfolio</title>
     <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
 </head>
 
 <body>
-    <h1> Jaynil's component library</h1>
-    <p> I am making a small component library for my portfolio website. This component library would also serve
-        as a fundamental library while developing my other projects and websites. </p>
-
-    <hr>
-
-    <h2>@Typography</h2>
-
-    <h1>This is the biggest heading</h1>
-    <h2>This is the second biggest heading</h2>
-    <p> This is a paragraph tag which will wrap at the end. It shows normal plain text in the browser</p>
-    <small> This is small tag which shows text relatively smaller </small>
-
-
-    <hr>
-
-
-    <h2>@Containers</h2>
-
-    <h3>@fluid container</h3>
-    <div class="container"> This is a fluid container which will stretch end-to-end and occupy the entire row. </div>
-
-    <h3>@center container</h3>
-    <div class="container container-center"> This is a center container which will be at the center of the row and will
-        stretch only till the specified
-        width </div>
-
-
-    <hr>
-    <!-- h1,h2,h3,div,p tags are block elements -->
-
-    <h2>@Links</h2>
-
-    <!-- Inline elements -->
-    <a class="link link-primary" href="/">Primary Link</a>
-    <a class="link link-secondary" href="/">Secondary Link</a>
-
-
-    <hr>
-
-
-    <h2>@Lists</h2>
-
-    <h3>@unordered lists</h3>
-    <ul class="list-non-bullet">
-        <li> Item One </li>
-        <li> Item Two </li>
-        <li> Item Three </li>
-    </ul>
-
-    <h3>@unordered inline lists</h3>
-    <ul class="list-non-bullet">
-        <li class="list-item-inline"> Inline Item One </li>
-        <li class="list-item-inline"> Inline Item Two </li>
-        <li class="list-item-inline"> Inline Item Three </li>
-    </ul>
-
-    <h3>@ordered lists</h3>
-    <ol>
-        <li> Item One </li>
-        <li> Item Two </li>
-        <li> Item Three </li>
-    </ol>
-
-    <h3>@reverse ordered lists</h3>
-    <ol>
-        <li> Item One </li>
-        <li> Item Two </li>
-        <li> Item Three </li>
-    </ol>
-
-
-    <hr>
-
-
-    <h2>@Nav</h2>
 
     <nav class="navigation">
-        <div class="nav-brand"> Programming Geek Jaynil</div>
+        <div class="nav-brand">NEOGRAMMER JAYNIL</div>
         <ul class="list-non-bullet nav-pills">
             <li class="list-item-inline ">
-                <a class="link link-active" href="/">Home</a>
+                <a class="link link-active" href="/">HOME</a>
             </li>
             <li class="list-item-inline">
-                <a class="link" href="/">Projects</a>
+                <a class="link" href="/">PROJECTS</a>
             </li>
             <li class="list-item-inline">
-                <a class="link" href="/">About</a>
+                <a class="link" href="/">BLOGS</a>
             </li>
         </ul>
     </nav>
 
 
-
-    <hr>
-
-
-
-    <h2>@Header</h2>
     <header class="hero">
-        <img class="hero-img"
-            src="https://avatars0.githubusercontent.com/u/48921037?s=460&u=486810ab25d526b1ef8b486cfa1a6c6de51e129a&v=4" />
-        <h1 class="hero-heading">Hey, I am Jaynil <span class="hero-heading-inverted"> I am geek</span></h1>
+        <img class="hero-img" src="images/hero.svg" />
+        <h1 class="hero-heading">Hello, I am Jaynil Gaglani, <span class="hero-heading-inverted"> a Fullstack
+                Developer.</span></h1>
+        <p> I want to take my passion, education, and experience <br /> to develop websites, webapps and mobile
+            applications.
+        </p>
     </header>
 
 
-    <hr>
+    <section class="section ow">
+        <div class="container container-center">
+            <h1> Technologies </h1>
+            <p> I am familiar with many technologies in the field of <em> Web Development , Machine Learning & Data
+                    Analaytics.</em> <br /> My top 5 skills include: <strong> <br /> Python, Java, HTML/CSS ,
+                    JavaScript & ReactJS.</strong>
+            </p>
+            <ul class="list-non-bullet">
+                <li class="list-item-inline"><i class='bx bxl-python bx-md bx-border-circle'></i></li>
+                <li class="list-item-inline"><i class='bx bxl-html5 bx-md bx-border-circle'></i></li>
+                <li class="list-item-inline"><i class='bx bxl-css3 bx-md bx-border-circle'></i></li>
+                <li class="list-item-inline"><i class='bx bxl-javascript bx-md bx-border-circle'></i></li>
+                <li class="list-item-inline"><i class='bx bxl-react bx-md bx-border-circle'></i></li>
+            </ul>
+        </div>
+    </section>
 
 
-    <h2>@Sections</h2>
-    <p> Sections are a part of the page which provide different views to the page <p>
-            <section class="section">
-                <div class="container container-center"></div>
-                <h1> Blue background </h1>
-                <p> This section will be of blue background </p>
-            </section>
+    <section class="section eme">
+        <div class="container container-center">
+            <h1> Projects </h1>
+            <p> I enjoy to continue learning to improve my knowledge and to gain a completely new experience. <br />
+                You'll see some of the frontend & backend projects I've accomplished.</p>
+            <p><a class="link link-primary" href=""> View Projects </a></p>
+        </div>
+    </section>
 
-            <section class="section ow">
-                <div class="container container-center"></div>
-                <h1> Cyan background</h1>
-                <p> This section will be of cyan background </p>
-            </section>
+    <section class="section ow">
+        <div class="container container-center">
+            <h1> Blogs </h1>
+            <p> <em> Blogs bring out the best out of me! &nbsp;</em> While writing blogs, I feel more conformatable and
+                get
+                hold of the topic. It improves my understanding and gives more clarity. <br />
+                Here are few of the blogs which I have written recently </p>
+            <p><a class="link link-primary" href=""> Read Blogs </a></p>
+        </div>
+    </section>
 
-
-            <hr>
-
-
-
-            <h2>@Footer</h2>
-            <footer class="footer">
-                <div class="footer-header"> Contacts & social links are listed in footer </div>
-                <ul class="list-non-bullet">
-                    <li class="list-item-inline"><a href="" class="link">LinkedIn</li>
-                    <li class="list-item-inline"><a href="" class="link">Twitter</li>
-                    <li class="list-item-inline"><a href="" class="link">GitHub</li>
-                    <li class="list-item-inline"><a href="" class="link">Instagram</li>
-                </ul>
-
-            </footer>
-
-            <hr>
-
-
+    <footer class="footer">
+        <div class="footer-header "> Let's Connect </div>
+        <p> I'd love if you reached out to me on any of the platforms below. Drop me a line and I’ll get back to you ASAP! </p>
+        <ul class="list-non-bullet">
+            <li class="list-item-inline"><a href="" class="link"><i
+                        class='bx bxl-linkedin bx-md bx-border-circle bx-tada-hover'></i></li>
+            <li class="list-item-inline"><a href="" class="link"><i
+                        class='bx bxl-twitter bx-md bx-border-circle bx-tada-hover'></i></li>
+            <li class="list-item-inline"><a href="" class="link"><i
+                        class='bx bxl-github bx-md bx-border-circle bx-tada-hover'></i></li>
+            <li class="list-item-inline"><a href="" class="link"><i
+                        class='bx bxl-instagram bx-md bx-border-circle bx-tada-hover'></i></li>
+                                    <li class="list-item-inline"><a href="" class="link"><i
+                        class='bx bx-envelope bx-md bx-border-circle bx-tada-hover'></i></li>
+            <!-- <li class="list-item-inline"><a href="" class="link"><i
+                        class='bx bx-mail-send bx-md bx-border-circle bx-tada-hover'></i></li>
+            <li class="list-item-inline"><a href="" class="link"><i
+                        class='bx bxl-quora bx-md bx-border-circle bx-tada-hover'></i></li>
+            <li class="list-item-inline"><a href="" class="link"><i
+                        class='bx bxl-facebook bx-md bx-border-circle bx-tada-hover'></i></li>
+            <li class="list-item-inline"><a href="" class="link"><i
+                        class='bx bxl-medium bx-md bx-border-circle bx-tada-hover'></i></li> -->
+        </ul>
+        <!-- <p> or write to me at <br/><a class="mail-link" href="g.jaynil2401@gmail.com">g.jaynil2401@gmail.com</a>
+        </p> -->
+        <p> <i class='bx bx-code-alt bx-sm' aria-hidden="true"> </i> with ❤️ by Jaynil Gaglani © 2020  <br/>
+            Built with pure HTML & CSS
+        </p>
+    </footer>
 
 
 </body>
