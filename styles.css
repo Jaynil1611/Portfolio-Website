@@ -8,6 +8,7 @@
     --off-white:#F0FDF4;
     --emerald-color:#A7F3D0;
     --background-hover-dark: #064E3B;
+    --background-hover-light:#34D399;
 }
 
 body {
@@ -39,6 +40,7 @@ p,h1 {
     text-decoration: none;
     padding: 0.5rem 1rem;    
     box-sizing: border-box;
+    display: inline-block;
 }
 
 .link-primary {
@@ -50,7 +52,6 @@ p,h1 {
 .link-primary:hover {
     background-color:white;
     color: var(--primary-color);
-    border-radius: 0.5rem;
     border: 1px solid green;
 }
 
@@ -62,7 +63,6 @@ p,h1 {
 
 .link-secondary:hover {
     background-color: var(--primary-color);
-    border-radius: 0.5rem;
     color:white;    
 }
 
@@ -178,9 +178,9 @@ header p{
     margin: auto;
 }
 
-.section .list-non-bullet i:hover{
-    background-color:  var(--emerald-color);
-    transition: all .2s ease-in-out;
+.link-tech i:hover{
+    background-color:  var(--background-hover-light);
+    transition: all .3s ease-in-out;
 }
 
 /* footer */
