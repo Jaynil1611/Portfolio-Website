@@ -16,18 +16,22 @@ body {
     margin: auto;
 }
 
-p {
+p,h1 {
     text-align: center;     
 }
 
 /* container */
 .container {
-    padding: 0rem 1 rem;
+    padding: 0rem 1rem;
 }
 
 .container-center {
     max-width: 500px;
     margin: auto;
+}
+
+.spacing {
+    padding: 0rem 1rem;
 }
 
 /* link */
@@ -70,6 +74,9 @@ p {
 /* list */
 .list-non-bullet {
     list-style-type: none;
+    padding-inline-start: 0px;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
 }
 
 .list-item-inline {
@@ -147,8 +154,9 @@ header p{
 
 /* section */
 .section {
-    padding: 2rem;
+    padding: 1rem;
 }
+
 .section h1 {
     text-align: center;
 }
@@ -164,6 +172,11 @@ header p{
 .section ul {
     padding-inline-start: 0px;
 }
+.section-img {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+}
 
 .section .list-non-bullet i:hover{
     background-color:  var(--emerald-color);
@@ -174,6 +187,7 @@ header p{
 .footer {
     background-color: var(--primary-color);
     padding: 1rem 1rem;
+    padding-top: 2rem;
     text-align: center;
     color:white;
     border-top-right-radius: 1rem;
@@ -190,7 +204,6 @@ header p{
 
 .footer ul {
     padding-inline-start: 0rem;
-    /* margin-block-start: 0rem; */
     margin-block-end: 0rem;
     margin-inline-end: 0rem;
 }
@@ -201,7 +214,7 @@ header p{
 }
 
 .footer i {
-   vertical-align: text-top;
+   vertical-align: text-top;   
 }
 
 .footer .list-non-bullet i:hover {

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Association Rule Mining in R</title>
+  <style>
+    * {
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 17px;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 1.6;
+      margin: 30px 0 0 0;
+      margin-bottom: 18px;
+      margin-top: 33px;
+      color: #333;
+    }
+
+    h3 {
+      font-size: 30px;
+      margin: 10px 0 20px 0;
+      color: #333;
+    }
+
+    header {
+      width: 640px;
+      margin: auto;
+    }
+
+    section {
+      width: 640px;
+      margin: auto;
+    }
+
+    section p {
+      margin-bottom: 27px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    section img {
+      max-width: 640px;
+    }
+
+    footer {
+      padding: 0 20px;
+      margin: 50px 0;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .aspectRatioPlaceholder {
+      max-width: auto !important;
+      max-height: auto !important;
+    }
+
+    .aspectRatioPlaceholder-fill {
+      padding-bottom: 0 !important;
+    }
+
+    header,
+    section[data-field=subtitle],
+    section[data-field=description] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <article class="h-entry">
+    <header>
+      <h1 class="p-name">Association Rule Mining in R</h1>
+    </header>
+    <section data-field="subtitle" class="p-summary">
+      Association Rule Mining is used when you want to find an association between different objects in a set, find
+      frequent patterns in a…
+    </section>
+    <section data-field="body" class="e-content">
+      <section name="13a6" class="section section--body section--first section--last">
+        <div class="section-divider">
+          <hr class="section-divider">
+        </div>
+        <div class="section-content">
+          <div class="section-inner sectionLayout--insetColumn">
+            <h3 name="d5c8" id="d5c8" class="graf graf--h3 graf--leading graf--title"><em
+                class="markup--em markup--h3-em">Association Rule Mining in R</em></h3>
+            <figure name="b124" id="b124" class="graf graf--figure graf-after--h3"><img class="graf-image"
+                data-image-id="1*D9zXX0vogN3o01O_KyWQ5A.jpeg" data-width="760" data-height="399" data-is-featured="true"
+                src="https://cdn-images-1.medium.com/max/800/1*D9zXX0vogN3o01O_KyWQ5A.jpeg">
+              <figcaption class="imageCaption"><strong class="markup--strong markup--figure-strong">Market
+                  Basket Analysis</strong></figcaption>
+            </figure>
+            <p name="88fd" id="88fd" class="graf graf--p graf-after--figure">Association Rule Mining is used when you
+              want to find an association between different objects in a set, find frequent patterns in a transaction
+              database, relational databases or any other information repository.</p>
+            <p name="e88c" id="e88c" class="graf graf--p graf-after--p">The applications of Association Rule Mining are
+              found in Marketing, Basket Data Analysis (or Market Basket Analysis) in retailing, clustering and
+              classification. It can tell you what items do customers frequently buy together by generating a set of
+              rules called Association Rules. In simple words, it gives you output as rules in form if this then that.
+            </p>
+            <p name="b39e" id="b39e" class="graf graf--p graf-after--p">Clients can use those rules for numerous
+              marketing strategies:</p>
+            <ul class="postList">
+              <li name="b08f" id="b08f" class="graf graf--li graf-after--p">Changing the store layout according to
+                trends</li>
+              <li name="b3bb" id="b3bb" class="graf graf--li graf-after--li">Customer behavior analysis</li>
+              <li name="3173" id="3173" class="graf graf--li graf-after--li">Catalogue design</li>
+              <li name="5826" id="5826" class="graf graf--li graf-after--li">Cross marketing on online stores</li>
+              <li name="dbaf" id="dbaf" class="graf graf--li graf-after--li">What are the trending items customers buy
+              </li>
+              <li name="f65e" id="f65e" class="graf graf--li graf-after--li">Customized emails with add-on sale</li>
+            </ul>
+            <p name="16f8" id="16f8" class="graf graf--p graf-after--li">Libraries used in this project are as follows :
+            </p>
+            <ol class="postList">
+              <li name="a791" id="a791" class="graf graf--li graf-after--p"><strong
+                  class="markup--strong markup--li-strong"><em
+                    class="markup--em markup--li-em">library(arules)</em></strong></li>
+              <li name="74bc" id="74bc" class="graf graf--li graf-after--li"><strong
+                  class="markup--strong markup--li-strong"><em
+                    class="markup--em markup--li-em">library(arulesViz)</em></strong></li>
+              <li name="9362" id="9362" class="graf graf--li graf-after--li"><strong
+                  class="markup--strong markup--li-strong"><em
+                    class="markup--em markup--li-em">library(dplyr)</em></strong></li>
+            </ol>
+            <p name="bb06" id="bb06" class="graf graf--p graf-after--li"><em class="markup--em markup--p-em">In this
+                blog , we are going to analyse the dataset “Groceries” present in “arules” package.Association mining is
+                implemented by the “Apriori” algorithm .<br>Apriori algorithm makes a set of rules for a particular
+                dataset and predicts the behavior of the data present in the dataset. So we now solve some questions
+                related to association mining in “R”.</em></p>
+            <p name="5054" id="5054" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">Step 1 :</strong></p>
+            <figure name="c4e3" id="c4e3" class="graf graf--figure graf-after--p"><img class="graf-image"
+                data-image-id="1*MSg1S2GvVFvAyP4etNfa8A.png" data-width="965" data-height="325"
+                src="https://cdn-images-1.medium.com/max/800/1*MSg1S2GvVFvAyP4etNfa8A.png"></figure>
+            <p name="780f" id="780f" class="graf graf--p graf-after--figure">We are reading a groceries.csv from the
+              specified directory into a variable called “grc” using read.csv() function. It reads the whole file and
+              stores in a variable.Then combining all the columns of the dataset into a single column called
+              “item”.Also , converting d3 into a dataframe.</p>
+            <figure name="ad38" id="ad38" class="graf graf--figure graf-after--p"><img class="graf-image"
+                data-image-id="1*QbgRCS99i4JlUwfowDnwFw.png" data-width="335" data-height="237"
+                src="https://cdn-images-1.medium.com/max/800/1*QbgRCS99i4JlUwfowDnwFw.png"></figure>
+            <p name="b0d7" id="b0d7" class="graf graf--p graf-after--figure"><strong
+                class="markup--strong markup--p-strong">Step 2:</strong></p>
+            <figure name="58db" id="58db" class="graf graf--figure graf-after--p"><img class="graf-image"
+                data-image-id="1*c52nFFFOAXTZAAh6aHBgQg.png" data-width="1010" data-height="357"
+                src="https://cdn-images-1.medium.com/max/800/1*c52nFFFOAXTZAAh6aHBgQg.png"></figure>
+            <p name="f2da" id="f2da" class="graf graf--p graf-after--figure">Here , we are cleaning the dataframe by
+              removing the empty rows in the dataframe, redefining the structure of the dataframe . Reading the file as
+              a transaction to get a transaction list of the dataset in hand. Viewing the structure and summarising the
+              transaction list.</p>
+            <figure name="82ec" id="82ec" class="graf graf--figure graf-after--p"><img class="graf-image"
+                data-image-id="1*4TR30bn3qiLMmEGh7lRyDA.png" data-width="1053" data-height="238"
+                src="https://cdn-images-1.medium.com/max/800/1*4TR30bn3qiLMmEGh7lRyDA.png"></figure>
+            <p name="6ad1" id="6ad1" class="graf graf--p graf-after--figure"><strong
+                class="markup--strong markup--p-strong">Step 3:</strong></p>
+            <figure name="a5b0" id="a5b0" class="graf graf--figure graf-after--p"><img class="graf-image"
+                data-image-id="1*tupgTycxY3vD-Mz5vYtCOg.png" data-width="954" data-height="393"
+                src="https://cdn-images-1.medium.com/max/800/1*tupgTycxY3vD-Mz5vYtCOg.png"></figure>
+            <p name="1343" id="1343" class="graf graf--p graf-after--figure">So , now for finding the top 20 items we
+              use group_by(),summarise(),<br>filter(),arrange() functions to collect top 20 “sold” items from the
+              dataset.<br>Saving the plot of top 20 items in a file called “top20.png” which gets saved in your working
+              directory by executing dev.off().</p>
+            <p name="dd53" id="dd53" class="graf graf--p graf-after--p"><em class="markup--em markup--p-em">The barplot
+                of top 20 items is as follows :</em></p>
+            <figure name="5579" id="5579" class="graf graf--figure graf-after--p"><img class="graf-image"
+                data-image-id="1*19IUviP9Dx_zGl2lZlPXGQ.png" data-width="480" data-height="480"
+                src="https://cdn-images-1.medium.com/max/800/1*19IUviP9Dx_zGl2lZlPXGQ.png">
+              <figcaption class="imageCaption"><strong class="markup--strong markup--figure-strong">Top 20
+                  Items Plot</strong></figcaption>
+            </figure>
+            <p name="a75e" id="a75e" class="graf graf--p graf-after--figure"><strong
+                class="markup--strong markup--p-strong">Step 4 :</strong></p>
+            <figure name="17c1" id="17c1" class="graf graf--figure graf-after--p"><img class="graf-image"
+                data-image-id="1*nDrOzKr6bTuSmG9vrZo_2Q.png" data-width="1046" data-height="497"
+                src="https://cdn-images-1.medium.com/max/800/1*nDrOzKr6bTuSmG9vrZo_2Q.png"></figure>
+            <p name="7871" id="7871" class="graf graf--p graf-after--figure">We are creating a new dataframe for storing
+              the sales of top 20 items .<br>For loop calculates the sales of each item and stores in corresponding
+              row.<br>The pie-chart for the sales distribution of top 20 items is stored in a file named “sales.png” .
+              pie() function is used to plot a pie-chart of sales percentage.</p>
+            <p name="2579" id="2579" class="graf graf--p graf-after--p"><em class="markup--em markup--p-em">The
+                pie-chart for sales distribution of top 20 items is as follows :</em></p>
+            <figure name="5856" id="5856" class="graf graf--figure graf-after--p"><img class="graf-image"
+                data-image-id="1*B8eczt7zYhZ14_zhokfnhw.png" data-width="480" data-height="480"
+                src="https://cdn-images-1.medium.com/max/800/1*B8eczt7zYhZ14_zhokfnhw.png">
+              <figcaption class="imageCaption"><strong class="markup--strong markup--figure-strong">Sales Percentage
+                  Distribution</strong></figcaption>
+            </figure>
+            <p name="15dd" id="15dd" class="graf graf--p graf-after--figure"><strong
+                class="markup--strong markup--p-strong">Step 5 :</strong></p>
+            <figure name="a3e3" id="a3e3" class="graf graf--figure graf-after--p"><img class="graf-image"
+                data-image-id="1*yQnTDJYyvnsry31Fcu_Gqg.png" data-width="1073" data-height="551"
+                src="https://cdn-images-1.medium.com/max/800/1*yQnTDJYyvnsry31Fcu_Gqg.png"></figure>
+            <p name="4044" id="4044" class="graf graf--p graf-after--figure">Rules are made by apriori algorithm by
+              using parameters support and confidence.<br><strong class="markup--strong markup--p-strong"><em
+                  class="markup--em markup--p-em">Support :</em></strong><em class="markup--em markup--p-em"> </em>It is
+              measure of how frequently the collection of items occur together as a precentage of all
+              transactions.<br><strong class="markup--strong markup--p-strong"><em
+                  class="markup--em markup--p-em">Confidence :</em></strong><em class="markup--em markup--p-em">
+              </em>The ratio of the number of transactions that include all items in {B} as well as the number of
+              transactions that include all items in {A} to the number of transactions that include all items in {A}.
+            </p>
+          </div>
+          <div class="section-inner sectionLayout--outsetColumn">
+            <figure name="8974" id="8974" class="graf graf--figure graf--layoutOutsetCenter graf-after--p"><img
+                class="graf-image" data-image-id="1*tjJUyBdjTUdY0mC3NtkH3Q.png" data-width="1354" data-height="244"
+                src="https://cdn-images-1.medium.com/max/1200/1*tjJUyBdjTUdY0mC3NtkH3Q.png"></figure>
+          </div>
+          <div class="section-inner sectionLayout--insetColumn">
+            <p name="6232" id="6232" class="graf graf--p graf-after--figure">The plot of rules made by apriori is as
+              follows :</p>
+            <figure name="5cdf" id="5cdf" class="graf graf--figure graf-after--p"><img class="graf-image"
+                data-image-id="1*gvAG2JvtAXBzrtw2UiC_FQ.png" data-width="480" data-height="480"
+                src="https://cdn-images-1.medium.com/max/800/1*gvAG2JvtAXBzrtw2UiC_FQ.png">
+              <figcaption class="imageCaption"><strong class="markup--strong markup--figure-strong">Rules</strong>
+              </figcaption>
+            </figure>
+            <p name="5a95" id="5a95" class="graf graf--p graf-after--figure"><strong
+                class="markup--strong markup--p-strong">Conclusion :</strong></p>
+            <p name="b592" id="b592" class="graf graf--p graf-after--p graf--trailing"><em
+                class="markup--em markup--p-em">To increase sales , whole milk should be placed in center of every
+                other<br>product to get attraction of most of the customers . Also , Vegetables , whole milk &amp;
+                yogurt should be positioned in such a way that when a customer visits the store these items should be
+                always be in the limelight of them.</em></p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer>
+      <p>By <a href="https://medium.com/@g.jaynil2401" class="p-author h-card">Jaynil Gaglani</a> on <a
+          href="https://medium.com/p/8c31909bf881"><time class="dt-published" datetime="2019-06-30T07:18:24.597Z">June
+            30, 2019</time></a>.</p>
+      <p><a href="https://medium.com/@g.jaynil2401/association-rule-mining-in-r-8c31909bf881"
+          class="p-canonical">Canonical link</a></p>
+    </footer>
+  </article>
+</body>
+
+</html>
