@@ -32,7 +32,8 @@ p,h1 {
 }
 
 .spacing {
-    padding: 0rem 1rem;
+    text-align: center;
+    /* padding: 0rem 1rem; */
 }
 
 /* link */
