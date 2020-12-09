@@ -38,10 +38,11 @@ p,h1 {
 
 /* link */
 .link {
+    display: inline-block;
+    margin: 0.5rem;
     text-decoration: none;
     padding: 0.5rem 1rem;    
-    box-sizing: border-box;
-    display: inline-block;
+    box-sizing: border-box;    
 }
 
 .link-primary {
