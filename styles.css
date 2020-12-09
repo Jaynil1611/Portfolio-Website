@@ -129,6 +129,7 @@ p,h1 {
 .hero .hero-img {    
     display: block;
     max-width: 300px;
+    width: 100%;
     margin: auto;    
 }
 
@@ -176,6 +177,7 @@ header p{
 .section-img {
     max-width: 300px;
     display: block;
+    width: 100%;
     margin: auto;
 }
 
